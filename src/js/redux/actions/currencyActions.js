@@ -6,11 +6,6 @@ import {
 } from './types';
 const rp = require('request-promise');
 
-//Action creator which makes an API request then dispatches the results to the store in its payload
-//Parameters:
-//  selected: array of ids of selected currencies
-//  reserve: array of ids of reserve currencies
-//  conversion: option to convert prices (string)
 export const fetchCurrencies = (selected, reserve, conversion) => dispatch => {
   let uri = `https://disquietude-coinmarketcap-microservice.glitch.me/api/quotes/${selected.join(',')}`;
 
